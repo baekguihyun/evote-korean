@@ -5,7 +5,8 @@ class ECrypt
 
     /* alphabet to be used when generating OTPs */
     // (tagit bort l,1,I,0,O,o från ursprunglig)
-    private $alpha = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    // private $alpha = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    private $alpha = "0123456789";
 
     /**
         Generates an array of one-time passwords (OTPs).

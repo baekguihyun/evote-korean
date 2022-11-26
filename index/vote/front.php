@@ -105,11 +105,11 @@ if(!$evote->ongoingSession()){
 					</script>
 	    	        <div class="form-group">
 	    	            <label><?php echo getLocalizedText("Personal code:")?></label>
-	    	            <input type="password" class="form-control" name="code1">
+	    	            <input type="text" class="form-control" name="code1" maxlength="5">
 	    	        </div>
-	    	        <div class="form-group">
+	    	        <div class="form-group hidden">
 	    	            <label><?php echo getLocalizedText("Temporary code:")?></label>
-	    	            <input type="text" class="form-control" name="code2">
+	    	            <input type="text" class="form-control" name="code2" value="22">
 	    	        </div>
                             <br>
                             <div class="span7 text-center">

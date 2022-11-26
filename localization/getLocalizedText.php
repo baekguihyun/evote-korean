@@ -16,8 +16,11 @@
         $_SESSION["lang"] = $_COOKIE["lang"];
     }
     else {
-        $_SESSION['lang'] = 'sv';
+        $_SESSION['lang'] = 'ko';
     }
+
+    $_SESSION['lang'] = 'ko';
+    
     /**
      * Use variable session language to return the correct string.
      * 

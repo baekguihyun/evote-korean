@@ -30,14 +30,14 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `elections` (
   `id` mediumint(9) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) COLLATE utf8_swedish_ci NOT NULL,
-  `pass` varchar(254) COLLATE utf8_swedish_ci DEFAULT NULL,
+  `name` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
+  `pass` varchar(254) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `active` tinyint(1) DEFAULT NULL,
   `tot_votes` int(11) DEFAULT NULL,
   `nbr_choices` int(11) NOT NULL,
   `failed_vote_attempts` int(11) DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -48,11 +48,11 @@ CREATE TABLE IF NOT EXISTS `elections` (
 CREATE TABLE IF NOT EXISTS `elections_alternatives` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `election_id` int(11) NOT NULL,
-  `name` varchar(64) COLLATE utf8_swedish_ci DEFAULT NULL,
+  `name` varchar(64) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `nbr_votes` int(11) DEFAULT NULL,
-  `hash` varchar(256) COLLATE utf8_swedish_ci DEFAULT NULL,
+  `hash` varchar(256) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -62,10 +62,10 @@ CREATE TABLE IF NOT EXISTS `elections_alternatives` (
 
 CREATE TABLE IF NOT EXISTS `elections_codes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `code` varchar(254) COLLATE utf8_swedish_ci NOT NULL,
+  `code` varchar(254) COLLATE utf8mb4_general_ci NOT NULL,
   `active` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AUTO_INCREMENT=5 ;
 
 -- --------------------------------------------------------
 
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `elections_usage` (
   `alternative_id` int(11) NOT NULL,
   `code_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -89,12 +89,12 @@ CREATE TABLE IF NOT EXISTS `elections_usage` (
 
 CREATE TABLE IF NOT EXISTS `sessions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) COLLATE utf8_swedish_ci DEFAULT NULL,
+  `name` varchar(64) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `active` tinyint(1) DEFAULT NULL,
   `start` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `end` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=66 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AUTO_INCREMENT=66 ;
 
 -- --------------------------------------------------------
 
@@ -104,11 +104,11 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(64) COLLATE utf8_swedish_ci DEFAULT NULL,
-  `password` varchar(512) COLLATE utf8_swedish_ci DEFAULT NULL,
+  `username` varchar(64) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `password` varchar(512) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `privilege` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AUTO_INCREMENT=20 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

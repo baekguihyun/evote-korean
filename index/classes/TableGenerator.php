@@ -35,7 +35,7 @@ class TableGenerator {
                 if($e_id != $row["e_id"]){
                     // Table header
                     echo "<tr class=\"rowheader\">
-                        <th colspan=\"3\">".$row["e_name"]." <wbr>($tot ".getLocalizedText("votes").", $max ".getLocalizedText("opt.").")</th>
+                        <th colspan=\"3\">".$row["e_name"]." <wbr><br>(".getLocalizedText("votes").": $tot 명, $max 개 ".getLocalizedText("opt.").")</th>
                         </tr>";
             		$e_id = $row["e_id"];
             		$p = 1;
@@ -50,8 +50,8 @@ class TableGenerator {
                     $limit++;
                 }
                 
-                echo "<tr class=$style><td class=\"col-md-4 col-xs-4\" ><b>$p</b> (".$row["votes"].", $percent) </td>
-                    <td class=\"col-md-8 col-xs-8\">".$row["name"]."</td><td></td></tr>\n";
+                echo "<tr class=$style><td class=\"col-md-5 col-xs-5\" ><b>$p.</b> (".$row["votes"]."표, $percent) </td>
+                    <td class=\"col-md-7 col-xs-7\">".$row["name"]."</td><td></td></tr>\n";
                 $p++;
                 $last_votes = $row["votes"];
 

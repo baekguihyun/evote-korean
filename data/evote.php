@@ -61,6 +61,18 @@ class Evote {
 	    return FALSE;
     }
 
+    public function countActiveInRound(){
+        $conn = $this->connect();
+        $sql =  "SELECT COUNT(code) FROM elections_codes WHERE (active IS NOT NULL)";
+        $r = $conn->query($sql);
+        $count = 0;
+        while($row = $r->fetch_array()){
+            $count = $row[0];
+        }
+        $conn->close();
+        return $count;
+    }
+
     public function countRounds(){
         $conn = $this->connect();
         $sql =  "SELECT COUNT(id) FROM elections";
@@ -294,19 +306,25 @@ class Evote {
         }
 
         $hash = crypt($personal_code, LOCAL_CONST_HASH_PEPPER); // LOCAL_CONST_HASH_PEPPER is generated to data/config.php by setup.py
-        $sql2 = "SELECT id FROM elections_codes WHERE (code=\"$hash\" AND active IS NULL)";
+        // $sql2 = "SELECT id FROM elections_codes WHERE (code=\"$hash\" AND active IS NULL)";
+        $sql2 = "SELECT id, active FROM elections_codes WHERE (code=\"$hash\")";
         $r2 = $conn->query($sql2);
         $personal_code_ok = FALSE;
+        $duplicate_ok = TRUE;
         $id = -1;
         if($r2->num_rows > 0){
             while($row = $r2->fetch_assoc()){
                     $personal_code_ok = TRUE;
                     $id = $row["id"];
+         
+                    if (!is_null($row["active"])) {
+                        $duplicate_ok = FALSE;
+                    }
             }
         }
 
         // lägg in i databasen
-        if($personal_code_ok && $current_code_ok && $this->checkRightElection($options)){
+        if($personal_code_ok && $duplicate_ok && $current_code_ok && $this->checkRightElection($options)){
             // First we invalidate the code
             $sql4 = "UPDATE elections_codes SET active=(SELECT MAX(id) FROM elections) WHERE id=$id";
             $conn->multi_query($sql4);
@@ -327,11 +345,23 @@ class Evote {
             }
 
             echo $p;
-            return TRUE;
+            // return TRUE;
+            return 0;
         }else{
             $failed_vote_query = "UPDATE elections SET failed_vote_attempts = failed_vote_attempts + 1 WHERE (active=1)";
             $conn->query($failed_vote_query);
-            return FALSE;
+            // return FALSE;
+
+            if (!$duplicate_ok) {
+                return 1;
+            }
+            else if (!$personal_code_ok) {
+                return 2;
+            }
+            else {
+                return 3;
+            }
+
         }
     }
 
@@ -357,7 +387,9 @@ class Evote {
             $opt = mysqli_real_escape_string($conn, $opt);
             $sql2 .= "(\"$last_id\",\"$opt\", 0),";
         }
-        $sql2 .= "(\"$last_id\",\"-Blank-\" , 0)";
+        
+        $sql2 = substr($sql2, 0, strlen($sql2) - 1);
+
         if ($conn->query($sql2) === TRUE) {
                 echo "Database created successfully";
         } else {

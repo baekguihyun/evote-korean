@@ -29,34 +29,42 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "E-vote - Your digital voting system"=>array(
         "sv"=>"E-vote - Ditt digitala röstsystem",
         "scanian"=>"E-vote - Ditt digitaula röestsystejm",
+        "ko"=>"E-vote - 반야월교회 갈렙청년부",
     ),
     "Voting page"=>array(
         "sv"=>"Röstningssida",
         "scanian"=>"Röestningssiedah",
+        "ko"=>"투표 페이지"
     ),
     "Log in"=>array(
         "sv"=>"Logga in",
         "scanian"=>"Låugga ejn",
+        "ko"=>"로그인"
     ),
     "Log out"=>array(
         "sv"=>"Logga ut",
         "scanian"=>"Låugga ud",
+        "ko"=>"로그아웃"
     ),
     "Election admin"=>array(
         "sv"=>"Valansvarig",
         "scanian"=>"Vaulansvari'",
+        "ko"=>"선거 관리"
     ),
     "Adjuster"=>array(
         "sv"=>"Justerare",
-        "scanian"=>"Juesterareh"
+        "scanian"=>"Juesterareh",
+        "ko"=>"조정자"
     ),
     "Manage users"=>array(
         "sv"=>"Hantera användare",
         "scanian"=>"Handskas mi anvendarna",
+        "ko"=>"사용자 관리"
     ),
     "Administrator"=>array(
         "sv"=>"Administratör",
         "scanian"=>"Administrautör",
+        "ko"=>"관리자"
     ),
     "E-vote must be configured"=>array(
         "sv"=>"E-vote måste konfigureras",
@@ -133,6 +141,7 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "Name:"=>array(
         "sv"=>"Namn:",
         "scanian"=>"Namn:",
+        "ko"=>"ID:"
     ),
     "Repeat password:"=>array(
         "sv"=>"Upprepa lösenord:",
@@ -146,6 +155,7 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "Close current election"=>array(
         "sv"=>"Stäng nuvarande val",
         "scanian"=>"Stäng det öppna vaulet",
+        "ko"=>"현재 선거 종료"
     ),
     "Your password:"=>array(
         "sv"=>"Ditt lösenord:",
@@ -179,47 +189,57 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     ),
     "There is nothing to vote on currently. Take a cookie."=>array(
         "sv"=>"Det finns inget att rösta på för tillfället. Ta en kaka.",
-        "scanian"=>"Det finns inge' att röesta po' just nue. Ta ejn spiddekauga. "
+        "scanian"=>"Det finns inge' att röesta po' just nue. Ta ejn spiddekauga. ",
+        "ko"=>"현재 투표할 항목이 없습니다."
     ),
     "Voting in progress"=>array(
         "sv"=>"Röstning pågår",
         "scanian"=>"Röestning påugåur",
+        "ko"=>"투표 진행 중"
     ),
     // These two are a bit iffy, since we need to insert a number in the middle.
     // Check the source file for help how to do this properly in your language
     "You can vote on <b>"=>array(
         "sv"=>"Du får rösta på <b>",
         "scanian"=>"Due fåur rösta po' <b>",
+        "ko"=>"다음 중 <b>"
     ),
     "</b> of the alternatives"=>array(
         "sv"=>"</b> av alternativen",
         "scanian"=>"</b> auv aelternatijven.",
+        "ko"=>"</b> 개 선택할 수 있습니다."
     ),
     // end of iffy things (for now)
     "Personal code:"=>array(
         "sv"=>"Personlig valkod:",
         "scanian"=>"Pärsonlig vaulkåd:",
+        "ko"=>"개인코드:"
     ),
     "Temporary code:"=>array(
         "sv"=>"Tillfällig valkod:",
         "scanian"=>"Ti'fälli' vaulkåd:",
+        "ko"=>"연도코드(22):"
     ),
     "Vote!"=>array(
         "sv"=>"Rösta!",
         "scanian"=>"Röesta!",
+        "ko"=>"투표!"
     ),
     // index/useradmin/useradminpanel.php
     "Choose"=>array(
         "sv"=>"Välj",
         "scanian"=>"Väelj",
+        "ko"=>"선택"
     ),
     "Name"=>array(
         "sv"=>"Namn",
         "scanian"=>"Namn",
+        "ko"=>"이름"
     ),
     "Privileges"=>array(
         "sv"=>"Privilegier",
         "scanian"=>"Pri'velejor",
+        "ko"=>"권한"
     ),
     "Remove selected users"=>array(
         "sv"=>"Ta bort markerade användare",
@@ -259,55 +279,68 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "There is no ongoing election session."=>array(
         "sv"=>"Det pågår inget valtillfälle.",
         "scanian"=>"De påugåur enget vaultillfelle",
+        "ko"=>"진행중인 선거가 없습니다."
     ),
     "Create new election round"=>array(
         "sv"=>"Skapa ny valomgång",
         "scanian"=>"Skaupa ny vaulomgong",
+        "ko"=>"새로운 선거 라운드 생성"
     ),
     "What to be elected:"=>array(
         "sv"=>"Vad som ska väljas:",
         "scanian"=>"Vaud som ska' veljas:",
+        "ko"=>"선거 라운드명:"
     ),
     "Number of selectable options:"=>array(
         "sv"=>"Antal valbara alternativ:",
         "scanian"=>"Antaul vaulbaura alternatejv:",
+        "ko"=>"선택가능 항목 수:"
     ),
     "Alternatives:"=>array(
         "sv"=>"Alternativ:",
         "scanian"=>"Alertnatejv:",
+        "ko"=>"후보들:"
     ),
     "Increase/decrease number of fields:"=>array(
         "sv"=>"Öka/minska antalet fält:",
         "scanian"=>"Öga/mijnska antaulet fielt:",
+        "ko"=>"후보 추가/삭제:"
     ),
     "Start new election round"=>array(
         "sv"=>"Starta ny valomgång",
         "scanian"=>"Staurta ny vaulomgong",
+        "ko"=>"새로운 선거 라운드 시작"
     ),
     "Previous election round"=>array(
         "sv"=>"Föregående valomgång",
         "scanian"=>"Förra vaulomgongen",
+        "ko"=>"과거 선거 라운드"
     ),
     "End election round"=>array(
         "sv"=>"Avsluta valomgång",
         "scanian"=>"Auvsluda vaulomgongen",
+        "ko"=>"선거 라운드 종료"
     ),
     // index/classes/TableGenerator.php
     "votes"=>array(
         "sv"=>"röster",
-        "scanian"=>"röestor"
+        "scanian"=>"röestor",
+        "ko"=>"투표자"
     ),
     "opt."=>array(
         "sv"=>"alt.",
         "scanian"=>"alt.",
+        "ko"=>"선택"
     ),
     "Number of failed voting attempts:"=>array(
         "sv"=>"Antal misslyckade röstningsförsök",
         "scanian"=>"Nummer fejlade röestningsförsög",
+        "ko"=>"실패한 투표 시도 횟수:"
     ),
     "Relationship between total votes accepted and failed voting attempts (lower is better):"=>array(
         "sv"=>"Förhållande mellan totalt antal accepterade röster och misslyckade röstningsförsök (lägre är bättre):",
         "scanian"=>"Föerhållaneh millan totault nummer okej röester o' fejlade röestningsförsög (mindre er biddre):",
+        "ko"=>"승인된 총 투표수와 실패한 투표 시도 횟수 간의 관계(낮을수록 좋음):"
     ),
     "Nothing has been elected yet"=>array(
         "sv"=>"Ingenting har valts ännu",
@@ -329,10 +362,12 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "Administrate election"=>array(
         "sv"=>"Administrera val",
         "scanian"=>"Styer över vaul",
+        "ko"=>"선거 관리"
     ),
     "See previous rounds"=>array(
         "sv"=>"Se tidigare omgångar",
         "scanian"=>"Se tidigare omgångar",
+        "ko"=>"과거 선거 라운드 보기"
     ),
     "See previous round"=>array(
         "sv"=>"Se föregående omgång",
@@ -358,14 +393,17 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "Create new election"=>array(
         "sv"=>"Skapa nytt val",
         "scanian"=>"Skaupa nytt vaul",
+        "ko"=>"새로운 선거 생성"
     ),
     "Name of election:"=>array(
         "sv"=>"Namn på val:",
         "scanian"=>"Namn po' vaul",
+        "ko"=>"선거 이름"
     ),
     "Max number of people:"=>array(
         "sv"=>"Max antal personer:",
         "scanian"=>"Max antal personor:",
+        "ko"=>"선거인 수"
     ),
     "Receive codes in CSV-format (for distance voting)"=>array(
         "sv"=>"Få koder i CSV-format (för distanstörstning)",
@@ -374,60 +412,88 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "Create"=>array(
         "sv"=>"Skapa",
         "scanian"=>"Skaupa",
+        "ko"=>"생성"
     ),
     "A new election has been created!"=>array(
         "sv"=>"Ett nytt val har skapats!",
         "scanian"=>"Ett nydd vaul haur skaupadts!",
+        "ko"=>"새로운 선거가 생성되었습니다."
     ),
     "Close current election"=>array(
         "sv"=>"Stäng nuvarande val",
         "scanian"=>"Stieng vaulet som é nue",
+        "ko"=>"현재 선거 종료."
     ),
     "Close election"=>array(
         "sv"=>"Stäng val",
-        "scanian"=>"Stieng vaul"
+        "scanian"=>"Stieng vaul",
+        "ko"=>"선거 종료"
     ),
     "Previous election rounds"=>array(
         "sv"=>"Tidigare valomgångar",
         "scanian"=>"Tiddigare vaulomgongar",
+        "ko"=>"과거 선거 라운드"
     ),
     // actions/votingspagehandler.php
     "You have not selected anything to vote on"=>array(
         "sv"=>"Du har inte valt någon att rösta på",
         "scanian"=>"Du haur ente vault nån att röesta po'",
+        "ko"=>"투표할 항목을 선택하지 않았습니다."
     ),
     "The election round you are trying to vote on has already ended. The page has been refreshed so you can try again"=>array(
         "sv"=>"Den valomgång du försöker rösta på har redan avslutats. Sidan har nu uppdaterats så du kan försöka igen",
         "scanian"=>"Den vaulomgongen due föersööker röesta po' haur rejdan avsludads. Sijdan haur nue oppdaterats såe due kan testa ijen",
+        "ko"=>"투표하려는 선거 라운드는 이미 종료되었습니다. 다시 시도할 수 있도록 페이지가 새로 고쳐졌습니다."
+    ),
+    "You can not choose too few candidates."=>array(
+        "sv"=>"Du får inte välja för många kandidater",
+        "scanian"=>"Due fåur ente vilja för många kandidator",
+        "ko"=>"너무 적은 후보자를 선택할 수 없습니다."
     ),
     "You are not allowed to pick too many candidates"=>array(
         "sv"=>"Du får inte välja för många kandidater",
         "scanian"=>"Due fåur ente vilja för många kandidator",
+        "ko"=>"너무 많은 후보자를 선택할 수 없습니다."
     ),
     "You have not entered any personal code"=>array(
         "sv"=>"Du har inte angett någon personlig valkod",
         "scanian"=>"Due har ente gett nån personlig vaulkåd",
+        "ko"=>"개인 코드를 입력하지 않았습니다."
     ),
     "You have not entered any temporary code"=>array(
         "sv"=>"Du har inte angett någon tillfällig valkod",
         "scanian"=>"Due haur ente gett nån tillfälli' vaulkåd",
+        "ko"=>"임시 코드를 입력하지 않았습니다."
     ),
     "The election round has already been terminated"=>array(
         "sv"=>"Valomgången har redan avslutats",
         "scanian"=>"Vaulomgongen haur rejdan auvsludats",
+        "ko"=>"선거 라운드가 이미 종료되었습니다."
     ),
     "Your vote has been registered"=>array(
         "sv"=>"Din röst har blivit registrerad",
         "scanian"=>"Dien röest haur blivid registrerad",
+        "ko"=>"투표가 등록되었습니다"
     ),
     "Your vote was not registered. This can depend on you entering one of the codes wrong, or because you already have voted"=>array(
         "sv"=>"Din röst blev inte registrerad. Detta kan bero på att du skrev in någon av koderna fel eller att du redan röstat",
-        "scanian"=>"Dien röst blejv ente registrerad. Det kan bero po' att du skrejv in nån av kåderna fejl ellor för att due rejdan röstat. Fubbik."
+        "scanian"=>"Dien röst blejv ente registrerad. Det kan bero po' att du skrejv in nån av kåderna fejl ellor för att due rejdan röstat. Fubbik.",
+        "ko"=>"투표 실패! 코드 중 하나를 잘못 입력했거나 이미 투표했을 수 있습니다"
+    ),
+    "Your vote was not registered. Because you already have voted"=>array(
+        "sv"=>"Din röst blev inte registrerad. Detta kan bero på att du skrev in någon av koderna fel eller att du redan röstat",
+        "scanian"=>"Dien röst blejv ente registrerad. Det kan bero po' att du skrejv in nån av kåderna fejl ellor för att due rejdan röstat. Fubbik.",
+        "ko"=>"투표 실패! 이미 투표했습니다"
+    ),
+    "Your vote was not registered. Personal code isn't exists"=>array(
+        "sv"=>"Din röst blev inte registrerad. Detta kan bero på att du skrev in någon av koderna fel eller att du redan röstat",
+        "scanian"=>"Dien röst blejv ente registrerad. Det kan bero po' att du skrejv in nån av kåderna fejl ellor för att due rejdan röstat. Fubbik.",
+        "ko"=>"투표 실패! 개인코드가 잘못되었습니다"
     ),
     // actions/usersessionhandler.php
     "You have not entered any username"=>array(
         "sv"=>"Du har inte skrivit in något användarnamn",
-        "scanian"=>"Due har ente skrivit in nått användarnamn",
+        "scanian"=>"Due har ente skrivit in nått användarnamn"
     ),
     "You have not entered any password"=>array(
         "sv"=>"Du har inte angett något lösenord",
@@ -486,6 +552,7 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "A new election round has begun"=>array(
         "sv"=>"En ny valomgång har börjat",
         "scanian"=>"Ejn ny vaulomgong haur startat'",
+        "ko"=>"새로운 선거가 시작되었습니다"
     ),
     // actions/csvcodesend.php
     "Personal code"=>array(
@@ -543,6 +610,7 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "Splendid!"=>array(
         "sv"=>"Kanon!",
         "scanian"=>"Redigt bra!",
+        "ko"=>"투표 완료!",
     ),
     "You are unreasonably good at this!"=>array(
         "sv"=>"Du är orimligt duktig på det här!",

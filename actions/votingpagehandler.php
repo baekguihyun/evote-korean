@@ -19,11 +19,17 @@ if (isset($_POST['button'])) {
             // If someone has an old page up and tries to vote
             $ok = false;
             $dialogue->appendMessage(getLocalizedText('The election round you are trying to vote on has already ended. The page has been refreshed so you can try again'), 'error');
-        } elseif ($evote->getMaxAlternatives() < count($_POST['person'])) {
-            // If someone disables the JS
+        } elseif ($evote->getMaxAlternatives() != count($_POST['person'])) { 
             $ok = false;
-            $dialogue->appendMessage(getLocalizedText('You are not allowed to pick too many candidates'), 'error');
-        }
+
+            if ($evote->getMaxAlternatives() < count($_POST['person'])) {
+                // If someone disables the JS
+                $dialogue->appendMessage(getLocalizedText('You are not allowed to pick too many candidates'), 'error');
+            }
+            else {
+                $dialogue->appendMessage(getLocalizedText('You can not choose too few candidates.'), 'error');
+            }
+        } 
 
         if ($_POST['code1'] == '') {
             $ok = false;
@@ -42,8 +48,14 @@ if (isset($_POST['button'])) {
             $person_id = $_POST['person'];
             $personal_code = $_POST['code1'];
             $current_code = $_POST['code2'];
-            if ($evote->vote($person_id, $personal_code, $current_code)) {
+            $result_vote = $evote->vote($person_id, $personal_code, $current_code);
+
+            if ($result_vote == 0) {
                 $dialogue->appendMessage(getLocalizedText('Your vote has been registered'), 'success');
+            } else if ($result_vote == 1) {
+                $dialogue->appendMessage(getLocalizedText("Your vote was not registered. Because you already have voted"), 'error');
+            } else if ($result_vote == 2) {
+                $dialogue->appendMessage(getLocalizedText("Your vote was not registered. Personal code isn't exists"), 'error');
             } else {
                 $dialogue->appendMessage(getLocalizedText("Your vote was not registered. This can depend on you entering one of the codes wrong, or because you already have voted"), 'error');
             }

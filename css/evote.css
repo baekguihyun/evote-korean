@@ -69,11 +69,12 @@
 }
 
 .rowheader {
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(100, 100, 100);
+		color: #fff;
 }
 
 .rowinfo {
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(230, 230, 230);
 }
 
 .sidebarruler {

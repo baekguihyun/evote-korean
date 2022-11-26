@@ -26,9 +26,9 @@ if(!$ongoingSession){ ?>
 	                <label><?php echo getLocalizedText("What to be elected:")?></label>
 	                <input type="text" class="form-control" name="round_name" autocomplete="off" maxlength="240">
 			</div>
-	        <div class="form-group">
+	        <div class="form-group hidden">
 	                <label><?php echo getLocalizedText("Temporary code:")?></label>
-	                <input type="text" class="form-control" name="code" autocomplete="off" maxlength="240"/>
+	                <input type="text" class="form-control" name="code" autocomplete="off" maxlength="240" value="22"/>
 	        </div>
 			<div class="form-group" style="max-width: 200px">
 	                <label><?php echo getLocalizedText("Number of selectable options:")?></label>
@@ -93,8 +93,14 @@ if(!$ongoingSession){ ?>
         echo "<div class=\"panel panel-default\">";
 
 		$tg->generateAvailableOptions();
-
+		
 		echo "</div>";
+?>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/countdown.js"></script>
+		<script src="js/checkCountActiveInRound.js"></script>
+<?php
+		echo "<p>현재 투표인원: <strong id=\"countActiveInRound\">0</strong> 명</p>";
 		echo "<div class=\"span7 text-center\">";
 		echo "<form action=/actions/electionadminpagehandler.php method=\"POST\">";
 		echo "<button type=\"submit\" class=\"btn btn-primary\" name=\"button\" value=\"end_round\">".getLocalizedText("End election round")."</button>";

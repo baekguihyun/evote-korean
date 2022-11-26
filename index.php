@@ -42,9 +42,9 @@ $randomString = new RandomInfo();
             </div>
             <!-- Language options -->
             <div class="col-md-4 col-sm-8 navbar-text" style="float: right; text-align: right;">
-                <h4>
+                <!-- <h4>
                     <a href="#" onclick="addURLParameter('lang', 'sv')">🇸🇪 Svenska</a> | <a href="#" onclick="addURLParameter('lang', 'en')">🇬🇧 English</a> | <a href='#' onclick="addURLParameter('lang', 'scanian')">❤️💛 Skånska</a>
-                </h4>
+                </h4> -->
                 <!-- Add language URL parameter -->
                 <script>
                 function addURLParameter(name, value) {
