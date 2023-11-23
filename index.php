@@ -41,28 +41,29 @@ $randomString = new RandomInfo();
                 </div>
             </div>
             <!-- Language options -->
-            <div class="col-md-4 col-sm-8 navbar-text" style="float: right; text-align: right;">
+            <!-- <div class="col-md-4 navbar-text" style="float: right; text-align: right;"> -->
                 <!-- <h4>
                     <a href="#" onclick="addURLParameter('lang', 'sv')">🇸🇪 Svenska</a> | <a href="#" onclick="addURLParameter('lang', 'en')">🇬🇧 English</a> | <a href='#' onclick="addURLParameter('lang', 'scanian')">❤️💛 Skånska</a>
                 </h4> -->
-                <!-- Add language URL parameter -->
-                <script>
-                function addURLParameter(name, value) {
-                    window.location.href = updateQueryStringParameter(window.location.href, name, value);
+            <!-- </div> -->
+            
+            <!-- Add language URL parameter -->
+            <script>
+            function addURLParameter(name, value) {
+                window.location.href = updateQueryStringParameter(window.location.href, name, value);
+            }
+            // Let's us update the language parameter when we click again using regex
+            function updateQueryStringParameter(uri, key, value) {
+                var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+                var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+                if (uri.match(re)) {
+                    return uri.replace(re, '$1' + key + "=" + value + '$2');
                 }
-                // Let's us update the language parameter when we click again using regex
-                function updateQueryStringParameter(uri, key, value) {
-                    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-                    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-                    if (uri.match(re)) {
-                        return uri.replace(re, '$1' + key + "=" + value + '$2');
-                    }
-                    else {
-                        return uri + "/" + separator + key + "=" + value;
-                    }
+                else {
+                    return uri + "/" + separator + key + "=" + value;
                 }
-                </script>
-            </div>
+            }
+            </script>
         </div>
 
 
