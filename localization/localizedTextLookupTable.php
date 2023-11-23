@@ -29,7 +29,7 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "E-vote - Your digital voting system"=>array(
         "sv"=>"E-vote - Ditt digitala röstsystem",
         "scanian"=>"E-vote - Ditt digitaula röestsystejm",
-        "ko"=>"E-vote - 반야월교회 갈렙청년부",
+        "ko"=>"E-vote",
     ),
     "Voting page"=>array(
         "sv"=>"Röstningssida",
@@ -74,10 +74,12 @@ define("LOCALIZED_TEXT_LOOKUP_TABLE", array(
     "Created by Informationsutskottet at E-sektionen at TLTH"=>array(
         "sv"=>"Skapad av Informationsutskottet inom E-sektionen inom TLTH",
         "scanian"=>"Skapad auv Infomationsutskottit inåm E-sektjonen inåm TLTH",
+				"ko"=>"Created by Informationsutskottet at E-sektionen at TLTH"
     ),
     "E-vote is open and free software licensed under MPL-2.0. Source code can be found at"=>array(
         "sv"=>"E-vote är öppen och fri mjukvara licenserad under MPL-2.0. Källkod hittas på",
         "scanian"=>"E-vote aer öppen o fri mjuekvaura lisensierad undår MPL-2.0. Källkåud hiddas po'",
+				"ko"=>"E-vote is open and free software licensed under MPL-2.0. Source code can be found at"
     ),
     // install/setup.php
     "E-vote Setup"=>array(
